@@ -1,0 +1,2 @@
+[09-Mar-2014 16:36:50] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/jumer/public_html/aplicaciontablas/admin/subir.php:9) in /home4/jumer/public_html/aplicaciontablas/admin/subir.php on line 42
+[09-Mar-2014 16:46:18] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/jumer/public_html/aplicaciontablas/admin/subir.php:9) in /home4/jumer/public_html/aplicaciontablas/admin/subir.php on line 42

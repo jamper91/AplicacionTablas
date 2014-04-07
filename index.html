@@ -1,0 +1,98 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Inspection Venerica</title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<!-- -->
+<script>var __links = document.querySelectorAll('a');function __linkClick(e) { parent.window.postMessage(this.href, '*');} ;for (var i = 0, l = __links.length; i < l; i++) {if ( __links[i].getAttribute('data-t') == '_blank' ) { __links[i].addEventListener('click', __linkClick, false);}}</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/notify.min.js"></script>
+<script>
+	
+	$(document).ready(function(c) {
+	$('.alert-close').on('click', function(c){
+		$('.message').fadeOut('slow', function(c){
+	  		$('.message').remove();
+		});
+	});	
+	$("#btnIngresar").click(function(e) {
+        //obtengo las variables a enviar por ajax
+		var usuario=$("#txtUsuario").val();
+		var clave=$("#txtClave").val();
+		//Realizo la consulta ajax
+		
+		$.ajax({
+			url:"php/ingresarUsuario.php",
+			type:"POST",
+			data:{
+				"usuario": usuario,
+				"clave": clave
+			},
+			success: function(e)
+			{
+				console.log("rol: "+e+"|");
+				if(e=='false')
+				{
+					$.notify("Usuario y/o contraseña incorrectos", "error");
+				}else if(e=="admin")
+				{
+					$(location).attr('href',"admin/index.html");
+				}else if(e=="usuario")
+				{
+					$(location).attr('href',"usuario/index.html");
+				}else if(e=="inspector")
+				{
+					$(location).attr('href',"inspector/index.html");
+				}
+			}
+			
+		});
+    });
+});
+</script>
+</head>
+<body>
+<!-- contact-form -->	
+<div class="message warning">
+<img src="web/images/logo.png" />
+<div class="contact-form"">
+	<div class="logo">
+		<h1>Ingresar</h1>
+	</div>	
+<!--- form --->
+<form class="form" action="" method="post" name="formularioIngresar" id="formularioIngresar">
+	<ul>
+		<li>
+			 <label><img src="images/contact.png" alt=""></label>
+			 <input id="txtUsuario" type="email" class="email" placeholder="usuario" required />		            
+		 </li>
+		 <li>
+			 <label><img src="images/lock.png" alt=""></label>
+			 <input id="txtClave" type="Password" name="Password" placeholder="clave" required />		         
+		 </li>
+		 
+		 <li class="style">
+		     <input id="btnIngresar" type="buttom" value="Ingresar">
+		 </li>
+	</ul>	
+	<div class="clear"></div>	   	
+</form>
+</div>
+</div>
+<div class="clear"></div>
+<!--- footer --->
+<div class="footer">
+	
+</div>
+</body>
+</html>
