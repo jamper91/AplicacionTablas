@@ -38,7 +38,8 @@ body {
 	width:95%;
 }
 .header_bg{
-	background: #252323;
+	/*background: #252323;*/
+	background: #FFF;
 }
 .header{
 	padding:2% 4%;
@@ -520,7 +521,8 @@ big {
 }
 /* start footer1 */
 .footer_bg1{
-	background:url('../images/footer_bg1.png');
+	/*background:url('../images/footer_bg1.png');*/
+	background:#FFF;
 }
 .footer1{
 	padding: 4% 4%;
