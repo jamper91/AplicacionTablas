@@ -1,12 +1,11 @@
 <?php
 session_start();
 include('../php/conectar.php');
-include('validarUsuario.php');
 ?>
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Inspection Venerica</title>
+<title>The Webworld-v2 Website Template | Contact :: w3layouts</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
@@ -157,7 +156,7 @@ include('validarUsuario.php');
             <tr>
                 <td>Categoria</td>
                 <td>Tabla</td>
-                <td>Ver</td>
+                <td>Ver/Usar</td>
                 <td>Eliminar</td>
             </tr>
             <?php
@@ -210,7 +209,7 @@ include('validarUsuario.php');
 					$html.="<tr>";
 					$html.= '<td align="center">'.$row["categoria"].'</td>';
 					$html.= '<td align="center">'.$row["nombre"].'</td>';
-					$html.= '<td align="center"><a href="ver.php?id='.$row["id"].'">Ver</a></td>';
+					$html.= '<td align="center"><a href="ver.php?id='.$row["id"].'">Ver</a> &nbsp; &nbsp; &nbsp;   <a href="crear.php?id='.$row["id"].'">USAR</a></td>';
 					//$html.= '<td align="center"><a href="#" onclick="eliminar('.$row["id"].')">Eliminar</a></td>';
 					$html.= '<td><div class="ser_btn">
                     		<a class="button  ser_btn1" href="#" idtabla="'.$row["id"].'">Borrar</a>

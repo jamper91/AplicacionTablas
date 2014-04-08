@@ -1,12 +1,11 @@
 <?php
 session_start();
 include('../php/conectar.php');
-include('validarUsuario.php');
 ?>
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Inspection Venerica</title>
+<title>The Webworld-v2 Website Template | Contact :: w3layouts</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
